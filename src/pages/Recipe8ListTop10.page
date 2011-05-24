@@ -1,0 +1,10 @@
+<apex:page controller="ChatterRecipesController">
+    <apex:pageBlock title="List Top 10 Posters">
+        <apex:repeat value="{!recipeEightTopPosters}" var="tp" id="mostpostlist" >
+            <apex:outputText value="{!tp.name}"/>
+             has made <apex:outputText value="{!tp.count}" id="topfcount"/> 
+             post<apex:outputText value="s" rendered="{!tp.count != '1'}" /> in the last week
+                    <br/>
+        </apex:repeat>
+    </apex:pageBlock>
+</apex:page>

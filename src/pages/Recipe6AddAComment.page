@@ -1,0 +1,11 @@
+<apex:page controller="ChatterRecipesController">
+<apex:messages />
+<apex:form >
+<apex:pageBlock title="Recipe 6 - Add A Comment">
+ FeedPost ID: <apex:inputText value="{!recipeSixFPostID}" id="fpostid" maxlength="1000" size="20" style="padding-bottom: 6px;" /><br/>
+ 
+ Comment: <apex:inputText value="{!recipeSixComment}" id="comment" maxlength="1000" size="70" style="padding-bottom: 6px;" />
+                    <apex:commandButton value="Add A Comment" action="{!recipeSixAddAComment}" />
+</apex:pageBlock>
+</apex:form>                 
+</apex:page>

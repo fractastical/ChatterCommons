@@ -1,0 +1,47 @@
+<apex:page controller="ChatterRecipesController">
+
+<apex:pageBlock title="Recipe 7 - Listing a Feed">
+  <!-- take our feeds and loop through them to display -->    
+    <apex:pageBlockTable value="{!RecipeSevenNewsFeed}" var="f" columns="4">
+           <apex:variable var="uid" value="{!f.FeedPost.CreatedById}" />
+           <!-- display the posts -->
+           <apex:column width="400">
+               <apex:facet name="header">Feed Post</apex:facet>
+               <p>
+               <apex:outputText value="{!f.Parent.Name}" id="parentname"/> said  
+                   <apex:outputText value=" {!f.FeedPost.Body}" id="feedbody"/>
+                    at 
+                   <apex:outputText value=" {0,date,M/d/yyyy h:mm a}">
+                       <apex:param value="{!f.CreatedDate}" />
+                   </apex:outputText>
+                </p> 
+           </apex:column>
+           <apex:column width="150" >
+                 <apex:facet name="header">Link URL</apex:facet>
+                 	<apex:outputText value="{!f.FeedPost.LinkUrl}" id="linkurl"/>   
+           </apex:column>
+            <!-- display the feed tracked changes, which is a nested collection within my newsfeed results -->
+           <apex:column width="150" >
+                 <apex:facet name="header">Tracked Changes</apex:facet>
+                  <p>     
+               
+               <apex:Repeat value="{!f.FeedTrackedChanges}" var="f">
+                <apex:outputText value="{!f.FieldName}" id="cfname"/> changed to &nbsp; 
+                            <apex:outputText value=" {!f.NewValue}" id="changes-repeat"/><br/>
+                       </apex:Repeat>
+               </p>
+            </apex:column>
+           <!-- display the comments, which is a nested collection within my newsfeed results -->
+           <apex:column width="150" >
+                 <apex:facet name="header">Comments</apex:facet>
+                  <p>     
+               <apex:Repeat value="{!f.FeedComments}" var="c">
+               		<apex:outputText value="{!c.CreatedBy.FirstName}" id="cfname"/> said
+               		<apex:outputText value="{!c.CommentBody}" id="comment-repeat"/>
+               </apex:Repeat>
+                
+               </p>
+            </apex:column>
+    </apex:pageBlockTable>
+</apex:pageBlock>
+</apex:page>

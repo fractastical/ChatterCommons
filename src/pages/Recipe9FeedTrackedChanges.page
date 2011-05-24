@@ -1,0 +1,16 @@
+<apex:page controller="ChatterRecipesController">
+ <apex:pageBlock title="List Feed Tracked Changes">
+     <apex:repeat value="{!recipeNineFeedTrackedChanges}" var="acct">
+         <p>
+             <apex:outputText value="{!acct.Parent.Name}" />has the following changes:<br/>
+             
+             <apex:repeat value="{!acct.feedTrackedChanges}" var="ftc">
+                     <apex:outputText value="{!ftc.fieldName}" />,
+                     <apex:outputText value="{!ftc.NewValue}" /><br/>
+             </apex:repeat>
+             
+       </p>
+     </apex:repeat>
+ 
+ </apex:pageBlock>
+</apex:page>

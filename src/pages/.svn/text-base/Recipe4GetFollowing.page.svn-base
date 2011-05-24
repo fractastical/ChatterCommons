@@ -1,0 +1,7 @@
+<apex:page controller="ChatterRecipesController">
+ <apex:pageBlock title="Recipe 4 - List Who I am Following">
+     <apex:repeat value="{!recipeFourGetFollowing}" var="f">
+              <apex:outputText value="{!f.parent.name}" /><br/>
+          </apex:repeat>
+ </apex:pageBlock>
+</apex:page>

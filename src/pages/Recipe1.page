@@ -1,0 +1,10 @@
+<apex:page controller="ChatterRecipesController">
+<apex:messages />
+<apex:form >
+
+<apex:pageBlock title="Recipe 1 - Update User Status">
+ <apex:inputText value="{!recipeOneUserStatus}" id="status" maxlength="1000" size="70" style="padding-bottom: 6px;" />
+                    <apex:commandButton value="Update Status" action="{!recipeOneDoUserStatus}" />
+</apex:pageBlock>
+</apex:form>                 
+</apex:page>

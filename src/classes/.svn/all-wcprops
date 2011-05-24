@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 34
+/svn/!svn/ver/10/trunk/src/classes
+END
+ChatterRecipesController.cls
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/!svn/ver/10/trunk/src/classes/ChatterRecipesController.cls
+END
+ChatterTestHelper.cls
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/!svn/ver/11/trunk/src/classes/ChatterTestHelper.cls
+END
+ChatterRecipesController.cls-meta.xml
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/!svn/ver/7/trunk/src/classes/ChatterRecipesController.cls-meta.xml
+END
+ChatterTestHelper.cls-meta.xml
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/!svn/ver/7/trunk/src/classes/ChatterTestHelper.cls-meta.xml
+END

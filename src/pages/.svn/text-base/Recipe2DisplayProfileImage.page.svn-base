@@ -1,0 +1,5 @@
+<apex:page controller="ChatterRecipesController">
+<apex:pageBlock title="Recipe 2 - Display Profile Image">
+   <apex:image value="/userphoto?u={!$User.Id}&v=2&s=T" height="50" width="50" />
+   </apex:pageBlock>
+</apex:page>
